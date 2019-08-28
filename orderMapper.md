@@ -34,7 +34,6 @@ JOIN product p  ON p.prod_no = line.order_prod_no
 WHERE order_id = #{id}
 ```
 
-**-->**
 
 | ORDER_NO |ORDER_TIME  |ORDER_PROD_NO  |ORDER_PROD_QUANTITY  |PROD_NAME|PROD_PRICE|
 |--|--|--|--|--|--|
@@ -44,6 +43,6 @@ WHERE order_id = #{id}
 1	|19/08/28| 15:26:37.622000000	|10003	|3|	나이트로 쇼콜라|	4000
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE0MjIxNDU0LC02NzExMTU3MDIsMTc0NT
-c3Mzc0NiwtNDE0MjY0OTM5LC0yMTQzNzk3NDUyXX0=
+eyJoaXN0b3J5IjpbLTEwMDc0OTQ0NjIsLTY3MTExNTcwMiwxNz
+Q1NzczNzQ2LC00MTQyNjQ5MzksLTIxNDM3OTc0NTJdfQ==
 -->

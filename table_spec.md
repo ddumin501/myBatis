@@ -88,7 +88,12 @@ add constraint order_quantity_ck check(order_quantity between 1 and 99);
 | 2 |10002 |1 |
 | 3 |10002 |4 |
 
+## order_seq
+```sql
+CREATE SEQUENCE order_seq START WITH 1 INCREMENT BY 1 NOCACHE;
+```
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3MDE2NDk3XX0=
+eyJoaXN0b3J5IjpbLTExNTUwNjk2MTYsMTY3MDE2NDk3XX0=
 -->

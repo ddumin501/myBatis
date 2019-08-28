@@ -28,17 +28,17 @@ JOIN product p  ON p.prod_no = line.order_prod_no
 WHERE order_id = #{id}
 ```
 --> 결과
-2	19/08/28 15:27:54.035000000	10001	2	플로랄 스타벅스 더블 샷	3000
-2	19/08/28 15:27:54.035000000	10003	3	나이트로 쇼콜라	4000
-1	19/08/28 15:26:37.622000000	10001	2	플로랄 스타벅스 더블 샷	3000
-1	19/08/28 15:26:37.622000000	10003	3	나이트로 쇼콜라	4000
-| ORDER_NO |ORDER_TIME  |ORDER_TIME  |ORDER_TIME  |
-|--|--|--|--|
-|  |  | | 
+
+| ORDER_NO |ORDER_TIME  |ORDER_PROD_NO  |ORDER_PROD_QUANTITY  |PROD_NAME|PROD_PRICE|
+|--|--|--|--|--|--|
+2|	19/08/28 |15:27:54.035000000|	10001|	2|플로랄 스타벅스 더블 샷|	3000
+2|	19/08/28 |15:27:54.035000000|	10003	|3	|나이트로 쇼콜라|	4000
+1|	19/08/28 |15:26:37.622000000|	10001|	2	|플로랄 스타벅스 더블 샷|	3000
+1	|19/08/28 15:26:37.622000000	|10003	3	나이트로 쇼콜라	4000
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzg5OTA5ODYsMTc0NTc3Mzc0NiwtND
-E0MjY0OTM5LC0yMTQzNzk3NDUyXX0=
+eyJoaXN0b3J5IjpbMTQyMzE5Mzc0LDE3NDU3NzM3NDYsLTQxND
+I2NDkzOSwtMjE0Mzc5NzQ1Ml19
 -->

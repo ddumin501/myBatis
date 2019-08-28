@@ -18,6 +18,7 @@
 			</association>
 		</collection>
 	</resultMap>
+```
 
 ```sql
 select info.order_no, info.order_time, line.order_prod_no, line.order_quantity,
@@ -26,10 +27,10 @@ from order_info info JOIN order_line line ON info.order_no = line.order_no
 JOIN product p  ON p.prod_no = line.order_prod_no
 WHERE order_id = #{id}
 ```
-
+--> 결고
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0NTc3Mzc0NiwtNDE0MjY0OTM5LC0yMT
-QzNzk3NDUyXX0=
+eyJoaXN0b3J5IjpbMTk2ODQ5NjcxOCwxNzQ1NzczNzQ2LC00MT
+QyNjQ5MzksLTIxNDM3OTc0NTJdfQ==
 -->

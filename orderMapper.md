@@ -1,37 +1,23 @@
 
 ## ResultMap
 ```java
-<!-- Very Complex Result Map -->
-<resultMap id="detailedBlogResultMap" type="Blog">
-	<constructor>
-		<idArg column="blog_id" javaType="int" />
-	</constructor>
-	<result property="title" column="blog_title" />
-	<association property="author" javaType="Author">
-		<id property="id" column="author_id" />
-		<result property="username" column="author_username" />
-		<result property="password" column="author_password" />
-		<result property="email" column="author_email" />
-		<result property="bio" column="author_bio" />
-		<result property="favouriteSection"
-			column="author_favourite_section" />
-	</association>
-	<collection property="posts" ofType="Post">
-		<id property="id" column="post_id" />
-		<result property="subject" column="post_subject" />
-		<association property="author" javaType="Author" />
-		<collection property="comments" ofType="Comment">
-			<id property="id" column="comment_id" />
+<resultMap id="orderResultMap" type="OrderInfo"
+		autoMapping="true">
+		<id property="order_no" column="order_no" />
+		<collection property="orderLines" ofType="OrderLine"
+			autoMapping="true">
+			<!-- id는 pk 역할.
+					property 값이 다르면 OrderLine타입의 새객채를 생성 -->
+			<!-- 	property값이 같으면 OrderLine타입의 기존객체 사용 -->
+			<!-- id태그가 없으면 무조건 OrderLine타입의 새객체를 생성 -->
+			<id property="order_no" column="order_no" />
+			<id property="product.prod_no" column="order_prod_no" />
+			<association property="product"
+				javaType="com.my.vo.Product" autoMapping="true">
+				<id property="prod_no" column="order_prod_no" />
+			</association>
 		</collection>
-		<collection property="tags" ofType="Tag">
-			<id property="id" column="tag_id" />
-		</collection>
-		<discriminator javaType="int" column="draft">
-			<case value="1" resultType="DraftPost" />
-		</discriminator>
-	</collection>
-</resultMap>
-```
+	</resultMap>
 
 ```sql
 select info.order_no, info.order_time, line.order_prod_no, line.order_quantity,
@@ -44,5 +30,6 @@ WHERE order_id = #{id}
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNDI2NDkzOSwtMjE0Mzc5NzQ1Ml19
+eyJoaXN0b3J5IjpbMTc0NTc3Mzc0NiwtNDE0MjY0OTM5LC0yMT
+QzNzk3NDUyXX0=
 -->

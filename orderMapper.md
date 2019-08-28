@@ -19,7 +19,10 @@
 		</collection>
 	</resultMap>
 ```
- column은 select 
+ column은 SQL 결과의 header와 일치.
+ property는 VO class의 변수명과 일치.
+ id는 table의 pk역할을 
+
 ```sql
 select info.order_no, info.order_time, line.order_prod_no, line.order_quantity,
 p.prod_name, p.prod_price
@@ -37,6 +40,6 @@ WHERE order_id = #{id}
 1	|19/08/28| 15:26:37.622000000	|10003	|3|	나이트로 쇼콜라|	4000
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNDUxMTM0MiwxNzQ1NzczNzQ2LC00MT
+eyJoaXN0b3J5IjpbMTc5NTczMzk0OSwxNzQ1NzczNzQ2LC00MT
 QyNjQ5MzksLTIxNDM3OTc0NTJdfQ==
 -->

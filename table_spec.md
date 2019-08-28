@@ -94,7 +94,9 @@ add constraint order_quantity_ck check(order_quantity between 1 and 99);
 CREATE SEQUENCE order_seq START WITH 1 INCREMENT BY 1 NOCACHE;
 ```
 
+
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUxMzU3MDU4LDE2NzAxNjQ5N119
+eyJoaXN0b3J5IjpbLTEwNDY5NTA1NjIsMTY3MDE2NDk3XX0=
 -->

@@ -3,7 +3,7 @@
 ```java
   OrderDAOOracle dao= new OrderDAOOracle(); 
    ```
-   ↓
+  ↓
    ```java
     String path = "beans.xml";
 	ApplicationContext ctx;
@@ -62,8 +62,8 @@ mybatis-spring, spring-jdbc 추가
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MTc0MTU5OCw4ODc5MTc1OTksMTQwMD
-M3NTIwNCwxNTE3MDY1NTUsMTgwNjYwOTk0Myw1NTQyNTg1Miwt
-MTAxODUwMDg2MCwxNzYwMDczMjcyLC04NDI0NzA0NjMsLTgyOT
-A4NjUyNywtODg4NDM2NzgxXX0=
+eyJoaXN0b3J5IjpbNzk3MzM3NjM0LDg4NzkxNzU5OSwxNDAwMz
+c1MjA0LDE1MTcwNjU1NSwxODA2NjA5OTQzLDU1NDI1ODUyLC0x
+MDE4NTAwODYwLDE3NjAwNzMyNzIsLTg0MjQ3MDQ2MywtODI5MD
+g2NTI3LC04ODg0MzY3ODFdfQ==
 -->

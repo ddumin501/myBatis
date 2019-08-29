@@ -1,6 +1,7 @@
 ## myBatis와 Spring 함께 쓰기
 
- ###  왜?   myBatis 설정파일 찾기 과정 생략 가능
+ ###  왜?   
+ #### myBatis 설정파일 찾기 과정 생략 가능
 >  String resource = "mybatis-config.xml"; 		
 >  InputStream inputStream; 		
 > SqlSession session = null; 		
@@ -59,8 +60,8 @@ mybatis-spring, spring-jdbc 추가
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMwNTM5NzUyLDg4NzkxNzU5OSwxNDAwMz
-c1MjA0LDE1MTcwNjU1NSwxODA2NjA5OTQzLDU1NDI1ODUyLC0x
-MDE4NTAwODYwLDE3NjAwNzMyNzIsLTg0MjQ3MDQ2MywtODI5MD
-g2NTI3LC04ODg0MzY3ODFdfQ==
+eyJoaXN0b3J5IjpbLTc3NjQ0NTYxMCw4ODc5MTc1OTksMTQwMD
+M3NTIwNCwxNTE3MDY1NTUsMTgwNjYwOTk0Myw1NTQyNTg1Miwt
+MTAxODUwMDg2MCwxNzYwMDczMjcyLC04NDI0NzA0NjMsLTgyOT
+A4NjUyNywtODg4NDM2NzgxXX0=
 -->

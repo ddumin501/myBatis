@@ -1,13 +1,12 @@
 ## myBatis와 Spring 함께 쓰기
 
-> // myBatis 설정파일 찾기 		
-> String resource = "mybatis-config.xml"; 		
-> // InputStream inputStream; 		
-> SqlSession session = null; 		if
-> (sqlSessionFactory != null) { 			// inputStream =
-> Resources.getResourceAsStream(resource); 			// SqlSessionFactory
-> sqlSessionFactory = new 			//
-> SqlSessionFactoryBuilder().build(inputStream);
+> ### myBatis 설정파일 찾기 과정 생략 가능
+>  String resource = "mybatis-config.xml"; 		
+>  InputStream inputStream; 		
+> SqlSession session = null; 		
+>inputStream = Resources.getResourceAsStream(resource); 			> SqlSessionFactory sqlSessionFactory = 
+>new  SqlSessionFactoryBuilder().build(inputStream);
+
 
 **1. pom.xml에 다음 라이브러리 추가**
 
@@ -51,7 +50,7 @@ mybatis-spring, spring-jdbc 추가
 	</bean>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjk1MTM5ODEsLTEwMTg1MDA4NjAsMT
-c2MDA3MzI3MiwtODQyNDcwNDYzLC04MjkwODY1MjcsLTg4ODQz
-Njc4MV19
+eyJoaXN0b3J5IjpbNTU0MjU4NTIsLTEwMTg1MDA4NjAsMTc2MD
+A3MzI3MiwtODQyNDcwNDYzLC04MjkwODY1MjcsLTg4ODQzNjc4
+MV19
 -->

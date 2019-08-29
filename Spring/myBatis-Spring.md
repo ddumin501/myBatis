@@ -17,9 +17,9 @@
         <version>5.0.2.RELEASE</version>
     </dependency>
 
-2. beans.xml
-namespace mybatis-spring 추가
-namespace spring-jdbc 추가
+2. beans.xml -> namespace
+mybatis-spring, spring-jdbc 추가
+3. beans.xml 코드 추가
 ```java
 <bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -38,6 +38,6 @@ namespace spring-jdbc 추가
 	</bean>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk4OTI4MDg1LDE3NjAwNzMyNzIsLTg0Mj
-Q3MDQ2MywtODI5MDg2NTI3LC04ODg0MzY3ODFdfQ==
+eyJoaXN0b3J5IjpbMTg0NDUyODkwMiwxNzYwMDczMjcyLC04ND
+I0NzA0NjMsLTgyOTA4NjUyNywtODg4NDM2NzgxXX0=
 -->

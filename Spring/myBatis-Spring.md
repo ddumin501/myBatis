@@ -35,7 +35,6 @@ mybatis-spring, spring-jdbc 추가
 ```java
 //dao 클래스 내부에 쓰일 property 지정
 <bean id="orderDAO" class="com.my.dao.OrderDAOOracle">
-		<property name="dataSource" ref="dataSource"></property>
 		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
 	</bean>
 
@@ -59,7 +58,7 @@ mybatis-spring, spring-jdbc 추가
 	</bean>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NjE0MzM5NiwxODA2NjA5OTQzLDU1ND
-I1ODUyLC0xMDE4NTAwODYwLDE3NjAwNzMyNzIsLTg0MjQ3MDQ2
-MywtODI5MDg2NTI3LC04ODg0MzY3ODFdfQ==
+eyJoaXN0b3J5IjpbMTUxNzA2NTU1LDE4MDY2MDk5NDMsNTU0Mj
+U4NTIsLTEwMTg1MDA4NjAsMTc2MDA3MzI3MiwtODQyNDcwNDYz
+LC04MjkwODY1MjcsLTg4ODQzNjc4MV19
 -->

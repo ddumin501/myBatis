@@ -54,11 +54,11 @@ mybatis-spring, spring-jdbc 추가
 <bean id="sqlSessionFactory"
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
-		<property name="configLocation" value = "classpath"></property>
+		<property name="configLocation" value = "classpath:mybatis-config.xml"></property>
 	</bean>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNzA2NTU1LDE4MDY2MDk5NDMsNTU0Mj
-U4NTIsLTEwMTg1MDA4NjAsMTc2MDA3MzI3MiwtODQyNDcwNDYz
-LC04MjkwODY1MjcsLTg4ODQzNjc4MV19
+eyJoaXN0b3J5IjpbMTQwMDM3NTIwNCwxNTE3MDY1NTUsMTgwNj
+YwOTk0Myw1NTQyNTg1MiwtMTAxODUwMDg2MCwxNzYwMDczMjcy
+LC04NDI0NzA0NjMsLTgyOTA4NjUyNywtODg4NDM2NzgxXX0=
 -->

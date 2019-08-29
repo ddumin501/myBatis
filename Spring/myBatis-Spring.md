@@ -12,18 +12,18 @@
     </dependency>
 ```
 -spring-jdbc 라이브러리
-
-    <!--https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+```java
+<!--https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
     <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-jdbc</artifactId>
         <version>5.0.2.RELEASE</version>
     </dependency>
-
+```
 **2. beans.xml -> namespace**
 mybatis-spring, spring-jdbc 추가
 
-3. beans.xml -> Source 추가
+**3. beans.xml -> Source 추가**
 ```java
 <bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -42,7 +42,7 @@ mybatis-spring, spring-jdbc 추가
 	</bean>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NDgyNTU5NCwtMTAxODUwMDg2MCwxNz
-YwMDczMjcyLC04NDI0NzA0NjMsLTgyOTA4NjUyNywtODg4NDM2
-NzgxXX0=
+eyJoaXN0b3J5IjpbLTExMzY0OTE3NTQsLTEwMTg1MDA4NjAsMT
+c2MDA3MzI3MiwtODQyNDcwNDYzLC04MjkwODY1MjcsLTg4ODQz
+Njc4MV19
 -->

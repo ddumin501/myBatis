@@ -7,7 +7,7 @@
 	ctx = new ClassPathXmlApplicationContext(path);
 	OrderDAO dao = ctx.getBean("orderDAO", com.my.dao.OrderDAO.class);
 ```
-
+### 결과 
 **1. pom.xml에 다음 라이브러리 추가**
 
 -mybatis-spring 라이브러리
@@ -59,8 +59,8 @@ mybatis-spring, spring-jdbc 추가
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODYyMjI3NzA4LDg4NzkxNzU5OSwxNDAwMz
-c1MjA0LDE1MTcwNjU1NSwxODA2NjA5OTQzLDU1NDI1ODUyLC0x
-MDE4NTAwODYwLDE3NjAwNzMyNzIsLTg0MjQ3MDQ2MywtODI5MD
-g2NTI3LC04ODg0MzY3ODFdfQ==
+eyJoaXN0b3J5IjpbLTE5NzIxMDk4ODksODg3OTE3NTk5LDE0MD
+AzNzUyMDQsMTUxNzA2NTU1LDE4MDY2MDk5NDMsNTU0MjU4NTIs
+LTEwMTg1MDA4NjAsMTc2MDA3MzI3MiwtODQyNDcwNDYzLC04Mj
+kwODY1MjcsLTg4ODQzNjc4MV19
 -->

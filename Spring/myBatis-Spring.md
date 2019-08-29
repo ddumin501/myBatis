@@ -33,25 +33,32 @@ mybatis-spring, spring-jdbc 추가
 
 **3. beans.xml -> Source 추가**
 ```java
-<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+//dao 클래스 내부에 쓰일 property 지정
+<bean id="orderDAO" class="com.my.dao.OrderDAOOracle">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
+
+//jdbc에 필요한 정보	
+<bean id="dataSource"		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName"
 			value="oracle.jdbc.drive.OracleDriver">
 		</property>
 		<property name="url"
-	value="jdbc:oracle:thin:@localhost:1521:xe">
+			value="jdbc:oracle:thin:@localhost:1521:xe">
 		</property>
 		<property name="username" value="ora_user"></property>
 		<property name="password" value="password"></property>
 	</bean>
-	<bean id="sqlSessionFactory"
+//myBatis에 쓰이는 
+<bean id="sqlSessionFactory"
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="configLocation" value = "classpath"></property>
 	</bean>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNjYwOTk0Myw1NTQyNTg1MiwtMTAxOD
-UwMDg2MCwxNzYwMDczMjcyLC04NDI0NzA0NjMsLTgyOTA4NjUy
-NywtODg4NDM2NzgxXX0=
+eyJoaXN0b3J5IjpbLTEwMzg5MDQ1MDEsMTgwNjYwOTk0Myw1NT
+QyNTg1MiwtMTAxODUwMDg2MCwxNzYwMDczMjcyLC04NDI0NzA0
+NjMsLTgyOTA4NjUyNywtODg4NDM2NzgxXX0=
 -->

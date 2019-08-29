@@ -1,12 +1,11 @@
 ## myBatis와 Spring 함께 쓰기
 ### 결과 
 ```java
-   //OrderDAOOracle dao= new OrderDAOOracle(); 
+   //OrderDAOOracle dao= new OrderDAOOracle(); //객체생성생략
    	String path = "beans.xml";
-	  ApplicationContext ctx;
-	  	ctx = new ClassPathXmlApplicationContext(path);
-	  	
-	  	OrderDAO dao = ctx.getBean("orderDAO", com.my.dao.OrderDAO.class);
+	ApplicationContext ctx;
+	ctx = new ClassPathXmlApplicationContext(path);
+	OrderDAO dao = ctx.getBean("orderDAO", com.my.dao.OrderDAO.class);
 ```
 
 **1. pom.xml에 다음 라이브러리 추가**
@@ -60,8 +59,8 @@ mybatis-spring, spring-jdbc 추가
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMzQ4OTI0OSw4ODc5MTc1OTksMTQwMD
-M3NTIwNCwxNTE3MDY1NTUsMTgwNjYwOTk0Myw1NTQyNTg1Miwt
-MTAxODUwMDg2MCwxNzYwMDczMjcyLC04NDI0NzA0NjMsLTgyOT
-A4NjUyNywtODg4NDM2NzgxXX0=
+eyJoaXN0b3J5IjpbODYyMjI3NzA4LDg4NzkxNzU5OSwxNDAwMz
+c1MjA0LDE1MTcwNjU1NSwxODA2NjA5OTQzLDU1NDI1ODUyLC0x
+MDE4NTAwODYwLDE3NjAwNzMyNzIsLTg0MjQ3MDQ2MywtODI5MD
+g2NTI3LC04ODg0MzY3ODFdfQ==
 -->

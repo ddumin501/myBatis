@@ -1,7 +1,8 @@
-**myBatis와 Spring 함께 쓰기
-1. pom.xml에 다음 라이브러리 추가
+## myBatis와 Spring 함께 쓰기
 
-**mybatis-spring 라이브러리**
+**1. pom.xml에 다음 라이브러리 추가**
+
+mybatis-spring 라이브러리
 <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
     <dependency>
         <groupId>org.mybatis</groupId>
@@ -18,7 +19,7 @@
         <version>5.0.2.RELEASE</version>
     </dependency>
 
-2. beans.xml -> namespace
+**2. beans.xml -> namespace
 mybatis-spring, spring-jdbc 추가
 
 3. beans.xml -> Source 추가
@@ -40,7 +41,7 @@ mybatis-spring, spring-jdbc 추가
 	</bean>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYzNTMyODMwLC0xMDE4NTAwODYwLDE3Nj
-AwNzMyNzIsLTg0MjQ3MDQ2MywtODI5MDg2NTI3LC04ODg0MzY3
-ODFdfQ==
+eyJoaXN0b3J5IjpbMjEwNDYwNjM1MiwtMTAxODUwMDg2MCwxNz
+YwMDczMjcyLC04NDI0NzA0NjMsLTgyOTA4NjUyNywtODg4NDM2
+NzgxXX0=
 -->

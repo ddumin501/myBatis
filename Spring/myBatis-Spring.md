@@ -1,3 +1,4 @@
+**myBatis와 Spring 함께 쓰기
 1. pom.xml에 다음 라이브러리 추가
 
 **mybatis-spring 라이브러리**
@@ -39,6 +40,7 @@ mybatis-spring, spring-jdbc 추가
 	</bean>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTg1MDA4NjAsMTc2MDA3MzI3MiwtOD
-QyNDcwNDYzLC04MjkwODY1MjcsLTg4ODQzNjc4MV19
+eyJoaXN0b3J5IjpbNzYzNTMyODMwLC0xMDE4NTAwODYwLDE3Nj
+AwNzMyNzIsLTg0MjQ3MDQ2MywtODI5MDg2NTI3LC04ODg0MzY3
+ODFdfQ==
 -->

@@ -50,6 +50,7 @@ mybatis-spring, spring-jdbc 추가
 		<property name="username" value="ora_user"></property>
 		<property name="password" value="password"></property>
 	</bean>
+
 //myBatis에 쓰이는 seqlSessionFactory
 <bean id="sqlSessionFactory"
 		class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -58,7 +59,7 @@ mybatis-spring, spring-jdbc 추가
 	</bean>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5OTAzMTExNCwxODA2NjA5OTQzLDU1ND
+eyJoaXN0b3J5IjpbLTM0NjE0MzM5NiwxODA2NjA5OTQzLDU1ND
 I1ODUyLC0xMDE4NTAwODYwLDE3NjAwNzMyNzIsLTg0MjQ3MDQ2
 MywtODI5MDg2NTI3LC04ODg0MzY3ODFdfQ==
 -->

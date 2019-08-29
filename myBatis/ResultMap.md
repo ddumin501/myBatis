@@ -20,9 +20,9 @@
 	</resultMap>
 ```
 
->  column은 SQL 결과의 header와 일치.  
->  property는 VO class의 변수명과 일치.    id는
-> table의 pk역할을 한다.
+  column은 SQL 결과의 header와 일치.  
+  property는 VO class의 변수명과 일치.    id는
+table의 pk역할을 한다.
 
  
 **SELECT문**
@@ -43,5 +43,6 @@ WHERE order_id = #{id}
 1	|19/08/28| 15:26:37.622000000	|10003	|3|	나이트로 쇼콜라|	4000
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDc0OTQ0NjJdfQ==
+eyJoaXN0b3J5IjpbLTE1OTM0MjI3NzgsLTEwMDc0OTQ0NjJdfQ
+==
 -->

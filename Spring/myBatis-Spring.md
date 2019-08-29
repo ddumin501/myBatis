@@ -1,19 +1,13 @@
 ## myBatis와 Spring 함께 쓰기
-
- ###  왜?   
- --> myBatis 설정파일 찾기 과정 생략 가능
-
-    String resource = "mybatis-config.xml"; 		
-    InputStream inputStream; 		
-    SqlSession session = null; 		
-    inputStream = Resources.getResourceAsStream(resource); 			 
-    SqlSessionFactory sqlSessionFactory = new  SqlSessionFactoryBuilder().build(inputStream//OrderDAOOracle dao= new OrderDAOOracle();		
-		String path = "beans.xml";
-	  	ApplicationContext ctx;
+### 결과 
+```java
+   //OrderDAOOracle dao= new OrderDAOOracle(); 
+   	String path = "beans.xml";
+	  ApplicationContext ctx;
 	  	ctx = new ClassPathXmlApplicationContext(path);
 	  	
-	  	OrderDAO dao = ctx.getBean("orderDAO", com.my.dao.OrderDAO.class););
-
+	  	OrderDAO dao = ctx.getBean("orderDAO", com.my.dao.OrderDAO.class);
+```
 
 **1. pom.xml에 다음 라이브러리 추가**
 
@@ -66,8 +60,8 @@ mybatis-spring, spring-jdbc 추가
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTE4ODQwOTksODg3OTE3NTk5LDE0MD
-AzNzUyMDQsMTUxNzA2NTU1LDE4MDY2MDk5NDMsNTU0MjU4NTIs
-LTEwMTg1MDA4NjAsMTc2MDA3MzI3MiwtODQyNDcwNDYzLC04Mj
-kwODY1MjcsLTg4ODQzNjc4MV19
+eyJoaXN0b3J5IjpbMTExMzQ4OTI0OSw4ODc5MTc1OTksMTQwMD
+M3NTIwNCwxNTE3MDY1NTUsMTgwNjYwOTk0Myw1NTQyNTg1Miwt
+MTAxODUwMDg2MCwxNzYwMDczMjcyLC04NDI0NzA0NjMsLTgyOT
+A4NjUyNywtODg4NDM2NzgxXX0=
 -->

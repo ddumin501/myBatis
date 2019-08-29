@@ -38,27 +38,29 @@ mybatis-spring, spring-jdbc 추가
 		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
 	</bean>
 
-//jdbc에 필요한 정보	
-<bean id="dataSource"		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName"
-			value="oracle.jdbc.drive.OracleDriver">
-		</property>
-		<property name="url"
-			value="jdbc:oracle:thin:@localhost:1521:xe">
-		</property>
-		<property name="username" value="ora_user"></property>
-		<property name="password" value="password"></property>
-	</bean>
-
 //myBatis에 쓰이는 seqlSessionFactory
 <bean id="sqlSessionFactory"
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
-		<property name="configLocation" value = "classpath:mybatis-config.xml"></property>
+		<property name="configLocation"
+			value="classpath:mybatis-config.xml"></property>
 	</bean>
+
+//jdbc에 필요한 정보
+<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="oracle.jdbc.driver.OracleDriver">
+		</property>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+		<property name="username" value="ora_user" />
+		<property name="password" value="password" />
+	</bean>
+
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMDM3NTIwNCwxNTE3MDY1NTUsMTgwNj
-YwOTk0Myw1NTQyNTg1MiwtMTAxODUwMDg2MCwxNzYwMDczMjcy
-LC04NDI0NzA0NjMsLTgyOTA4NjUyNywtODg4NDM2NzgxXX0=
+eyJoaXN0b3J5IjpbODg3OTE3NTk5LDE0MDAzNzUyMDQsMTUxNz
+A2NTU1LDE4MDY2MDk5NDMsNTU0MjU4NTIsLTEwMTg1MDA4NjAs
+MTc2MDA3MzI3MiwtODQyNDcwNDYzLC04MjkwODY1MjcsLTg4OD
+QzNjc4MV19
 -->

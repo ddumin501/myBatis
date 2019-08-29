@@ -1,8 +1,11 @@
 ## myBatis와 Spring 함께 쓰기
 ### 결과 
 ```java
-   //OrderDAOOracle dao= new OrderDAOOracle(); //객체생성생략
-   	String path = "beans.xml";
+  OrderDAOOracle dao= new OrderDAOOracle(); 
+   ```
+   ↓
+   ```java
+    String path = "beans.xml";
 	ApplicationContext ctx;
 	ctx = new ClassPathXmlApplicationContext(path);
 	OrderDAO dao = ctx.getBean("orderDAO", com.my.dao.OrderDAO.class);
@@ -59,8 +62,8 @@ mybatis-spring, spring-jdbc 추가
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDE2NjI4NzQsODg3OTE3NTk5LDE0MD
-AzNzUyMDQsMTUxNzA2NTU1LDE4MDY2MDk5NDMsNTU0MjU4NTIs
-LTEwMTg1MDA4NjAsMTc2MDA3MzI3MiwtODQyNDcwNDYzLC04Mj
-kwODY1MjcsLTg4ODQzNjc4MV19
+eyJoaXN0b3J5IjpbMTA0MTc0MTU5OCw4ODc5MTc1OTksMTQwMD
+M3NTIwNCwxNTE3MDY1NTUsMTgwNjYwOTk0Myw1NTQyNTg1Miwt
+MTAxODUwMDg2MCwxNzYwMDczMjcyLC04NDI0NzA0NjMsLTgyOT
+A4NjUyNywtODg4NDM2NzgxXX0=
 -->

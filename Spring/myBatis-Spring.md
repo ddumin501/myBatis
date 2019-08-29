@@ -1,4 +1,4 @@
-
+1.pom.xml에 다음 라이브러리 추가
 **mybatis-spring 라이브러리**
 <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
     <dependency>
@@ -20,7 +20,24 @@
 
 namespace mybatis-spring 추가
 namespace spring-jdbc 추가
+```java
+<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="oracle.jdbc.drive.OracleDriver">
+		</property>
+		<property name="url"
+	value="jdbc:oracle:thin:@localhost:1521:xe">
+		</property>
+		<property name="username" value="ora_user"></property>
+		<property name="password" value="password"></property>
+	</bean>
+	<bean id="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MDA3MzI3MiwtODQyNDcwNDYzLC04Mj
-kwODY1MjcsLTg4ODQzNjc4MV19
+eyJoaXN0b3J5IjpbLTE4MTE0MjY5NjksMTc2MDA3MzI3MiwtOD
+QyNDcwNDYzLC04MjkwODY1MjcsLTg4ODQzNjc4MV19
 -->

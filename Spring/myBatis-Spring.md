@@ -11,6 +11,9 @@
 	OrderDAO dao = ctx.getBean("orderDAO", com.my.dao.OrderDAO.class);
 ```
 ### 과정
+
+**0. 객체를 인터페이스를 상속하도록 변경**
+
 **1. pom.xml에 다음 라이브러리 추가**
 
 -mybatis-spring 라이브러리
@@ -62,8 +65,8 @@ mybatis-spring, spring-jdbc 추가
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNjcwMzUyNyw4ODc5MTc1OTksMTQwMD
-M3NTIwNCwxNTE3MDY1NTUsMTgwNjYwOTk0Myw1NTQyNTg1Miwt
-MTAxODUwMDg2MCwxNzYwMDczMjcyLC04NDI0NzA0NjMsLTgyOT
-A4NjUyNywtODg4NDM2NzgxXX0=
+eyJoaXN0b3J5IjpbMjA0ODcxMzQ4LC0zMzY3MDM1MjcsODg3OT
+E3NTk5LDE0MDAzNzUyMDQsMTUxNzA2NTU1LDE4MDY2MDk5NDMs
+NTU0MjU4NTIsLTEwMTg1MDA4NjAsMTc2MDA3MzI3MiwtODQyND
+cwNDYzLC04MjkwODY1MjcsLTg4ODQzNjc4MV19
 -->

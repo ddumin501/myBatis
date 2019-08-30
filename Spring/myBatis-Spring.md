@@ -35,7 +35,7 @@
     </dependency>
 ```
 **2. beans.xml -> namespaces**
-mybatis-spring오 jdbc체크
+mybatis-spring와  jdbc체크
 
 **3. beans.xml -> Source 추가**
 ```java
@@ -65,9 +65,9 @@ mybatis-spring오 jdbc체크
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0OTM3ODM3MSwyMDQ4NzEzNDgsLTMzNj
-cwMzUyNyw4ODc5MTc1OTksMTQwMDM3NTIwNCwxNTE3MDY1NTUs
-MTgwNjYwOTk0Myw1NTQyNTg1MiwtMTAxODUwMDg2MCwxNzYwMD
-czMjcyLC04NDI0NzA0NjMsLTgyOTA4NjUyNywtODg4NDM2Nzgx
-XX0=
+eyJoaXN0b3J5IjpbLTE0NTc5NjIyNjEsMjA0ODcxMzQ4LC0zMz
+Y3MDM1MjcsODg3OTE3NTk5LDE0MDAzNzUyMDQsMTUxNzA2NTU1
+LDE4MDY2MDk5NDMsNTU0MjU4NTIsLTEwMTg1MDA4NjAsMTc2MD
+A3MzI3MiwtODQyNDcwNDYzLC04MjkwODY1MjcsLTg4ODQzNjc4
+MV19
 -->

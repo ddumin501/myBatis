@@ -34,7 +34,7 @@
         <version>5.0.2.RELEASE</version>
     </dependency>
 ```
-**2. beans.xml -> namespace**
+**2. beans.xml -> namespaces**
 mybatis-spring, spring-jdbc 추가
 
 **3. beans.xml -> Source 추가**
@@ -65,8 +65,9 @@ mybatis-spring, spring-jdbc 추가
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0ODcxMzQ4LC0zMzY3MDM1MjcsODg3OT
-E3NTk5LDE0MDAzNzUyMDQsMTUxNzA2NTU1LDE4MDY2MDk5NDMs
-NTU0MjU4NTIsLTEwMTg1MDA4NjAsMTc2MDA3MzI3MiwtODQyND
-cwNDYzLC04MjkwODY1MjcsLTg4ODQzNjc4MV19
+eyJoaXN0b3J5IjpbMTMzMzU2MzM5OSwyMDQ4NzEzNDgsLTMzNj
+cwMzUyNyw4ODc5MTc1OTksMTQwMDM3NTIwNCwxNTE3MDY1NTUs
+MTgwNjYwOTk0Myw1NTQyNTg1MiwtMTAxODUwMDg2MCwxNzYwMD
+czMjcyLC04NDI0NzA0NjMsLTgyOTA4NjUyNywtODg4NDM2Nzgx
+XX0=
 -->

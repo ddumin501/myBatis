@@ -35,7 +35,7 @@
     </dependency>
 ```
 **2. beans.xml -> namespaces**
-mybatis-spring, spring-jdbc 추가
+mybatis-spring 추가
 
 **3. beans.xml -> Source 추가**
 ```java
@@ -65,7 +65,7 @@ mybatis-spring, spring-jdbc 추가
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMzU2MzM5OSwyMDQ4NzEzNDgsLTMzNj
+eyJoaXN0b3J5IjpbLTM3NDA1MTc5MCwyMDQ4NzEzNDgsLTMzNj
 cwMzUyNyw4ODc5MTc1OTksMTQwMDM3NTIwNCwxNTE3MDY1NTUs
 MTgwNjYwOTk0Myw1NTQyNTg1MiwtMTAxODUwMDg2MCwxNzYwMD
 czMjcyLC04NDI0NzA0NjMsLTgyOTA4NjUyNywtODg4NDM2Nzgx

@@ -15,29 +15,34 @@ mvc-servlet.mxl에 있던 component-scan 구문과 bean 생성 구문을 옮겨�
 //applicationContext.xml
 
 <context:annotation-config/>
-<context:component-scan base-package="com.my.service"/>
-	<context:component-scan base-package="com.my.dao"/>
-	
-	<bean id="sqlSessionFactory"
-		class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource"></property>
-		<property name="configLocation"
-			value="classpath:mybatis-config.xml"></property>
-	</bean>
-	
-	
-	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName"
-			value="oracle.jdbc.driver.OracleDriver">
-		</property>
-		<property name="url"
-			value="jdbc:oracle:thin:@localhost:1521:xe" />
-		<property name="username" value="ora_user" />
-		<property name="password" value="password" />
-	</bean>
+   <!-- 비즈니스로직용 -->
+   <context:component-scan base-package="com.my.service"/>
+   <context:component-scan base-package="com.my.dao"/>
+   
+   
+   <!-- 비즈니스로직용 -->
+   <beans>
+   <bean id="dataSource"
+      class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+      <property name="driverClassName"
+         value="oracle.jdbc.driver.OracleDriver">
+      </property>
+      <property name="url"
+         value="jdbc:oracle:thin:@localhost:1521:xe">
+      </property>
+      <property name="username" value="c##oracle_user"></property>
+      <property name="password" value="dmsk"></property>
+   </bean>
+   <!-- 비즈니스로직용 -->
+   <bean id="sqlSessionFactory"
+      class="org.mybatis.spring.SqlSessionFactoryBean">
+      <property name="dataSource" ref="dataSource"></property>
+      <property name="configLocation" value="classpath:mybatis-config.xml"/>
+   </bean>
+</beans>
 ```
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTI4MjExMDZdfQ==
+eyJoaXN0b3J5IjpbLTIxMzA0MjIzOTcsLTIwMTI4MjExMDZdfQ
+==
 -->

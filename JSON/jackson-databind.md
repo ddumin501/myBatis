@@ -14,7 +14,7 @@ jackson을 이용하면 번거로운 json객체를 쉽게 만들거나 String으
 ```
 #### Test해보기
 ```java
-//A.java (POJO
+//A.java (POJO)
 public class A {
 	private String str;
 	private int num;
@@ -38,10 +38,10 @@ public class A {
 	public void setFlag(boolean flag) {
 		this.flag = flag;
 	}
-	
 }
 
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzOTk0MjU4LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTg4NzA1NjYyMSw3MzA5OTgxMTZdfQ==
 -->

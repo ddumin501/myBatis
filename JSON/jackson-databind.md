@@ -99,7 +99,19 @@ public class Test {
 	}
 }
 
+------------------------console------------------------
+{"str":"test","num":123,"flag":true}
+
+test:123:true
+
+[{"str":null,"num":1,"flag":false},{"str":null,"num":2,"flag":false},{"str":null,"num":3,"flag":false},{"str":null,"num":4,"flag":false},{"str":null,"num":5,"flag":false}]
+
+null:1:false
+null:2:false
+null:3:false
+null:4:false
+null:5:false
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzQxODk4NTgsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTEyNDgwNzc0ODUsNzMwOTk4MTE2XX0=
 -->

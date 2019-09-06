@@ -1,6 +1,6 @@
 
 ## JSON객체를 편하게 만드는 방법
-jackson을 이용하면 번거로운 json객체를 쉽게 만들거나 String으로 변환할 수 있다.
+jackson을 이용하면 Object 객체를 jsonString형식으로 쉽게 만들거나, 다시 Object로 변환 할 수 있다.
 
 ```java
 //Maver Repository에서 jackson databind 검색
@@ -13,7 +13,7 @@ jackson을 이용하면 번거로운 json객체를 쉽게 만들거나 String으
 </dependency>
 ```
 #### Test해보기
-JSON String으로 변환 = ㅡ메ㅔㄷㄱ..
+JSON String으로 변환 = mapper.writeValueAsString(Object);
 ```java
 //A.java (POJO)
 public class A {
@@ -114,5 +114,5 @@ null:4:false
 null:5:false
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTQ1MTMzMDAsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTEyODk3MjY1MzQsNzMwOTk4MTE2XX0=
 -->

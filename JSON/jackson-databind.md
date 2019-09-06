@@ -13,6 +13,7 @@ jackson을 이용하면 번거로운 json객체를 쉽게 만들거나 String으
 </dependency>
 ```
 #### Test해보기
+JSON String으로 변환 = ㅡ메ㅔㄷㄱ..
 ```java
 //A.java (POJO)
 public class A {
@@ -113,5 +114,5 @@ null:4:false
 null:5:false
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDgwNzc0ODUsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTExNTQ1MTMzMDAsNzMwOTk4MTE2XX0=
 -->

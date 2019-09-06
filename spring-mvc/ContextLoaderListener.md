@@ -41,7 +41,6 @@ mvc-servlet.mxl에 있던 비즈니스로직용 Bean을 옮겨온다.
    </bean>
 </beans>
 ```
-> Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxNjA2NzA4NiwtMjAxMjgyMTEwNl19
+eyJoaXN0b3J5IjpbMTExNjMyMjU1MCwtMjAxMjgyMTEwNl19
 -->

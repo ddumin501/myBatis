@@ -10,7 +10,7 @@ Spring Bean객체를 프로젝트가 Load될때 미리 만드는 작업이다.
 ```
 
 Spring Bean Configure File을 새로 만든 후 
-component-scan 구문과 bean 생성 굼ㄴ
+mvc-servlet.mxl에 있던 component-scan 구문과 bean 생성 구문을 옮겨온다.
 ```java
 //applicationContext.xml
 
@@ -39,5 +39,5 @@ component-scan 구문과 bean 생성 굼ㄴ
 ```
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyMjU2MzI5M119
+eyJoaXN0b3J5IjpbLTIwMTI4MjExMDZdfQ==
 -->

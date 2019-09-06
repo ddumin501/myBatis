@@ -1,5 +1,5 @@
 
-Spring Bean객체를 프로젝트가 Load될때 미리 만드는 작업이다.
+Spring Bean객체를 프로젝트가 Load될때 미리 생성하게 하는 작업이다.
 
 ```java
 //web.xml에 추가
@@ -41,6 +41,7 @@ mvc-servlet.mxl에 있던 비즈니스로직용 Bean을 옮겨온다.
    </bean>
 </beans>
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNjMyMjU1MCwtMjAxMjgyMTEwNl19
+eyJoaXN0b3J5IjpbMTI4MTkyMjAzNiwtMjAxMjgyMTEwNl19
 -->

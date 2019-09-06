@@ -14,6 +14,7 @@ jackson을 이용하면 Object 객체를 jsonString형식으로 쉽게 만들거
 ```
 #### Test해보기
 JSON String으로 변환 = mapper.writeValueAsString(Object);
+Object 객체로 변환 = mapper.readValue(jsonSourcce, ObjectType);
 ```java
 //A.java (POJO)
 public class A {
@@ -114,5 +115,5 @@ null:4:false
 null:5:false
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODk3MjY1MzQsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTE1NTY0ODU3MjQsNzMwOTk4MTE2XX0=
 -->

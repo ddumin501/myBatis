@@ -15,9 +15,9 @@
 2) 핵심사항용 클래스로드시 바이트코드에 공통사항을 추가
 3) 런타임시 프록시객체를 생성해서 공통사항을 추가 
 
-호출전에 처리되는 공통사항 -> Advice
-핵심사항 -> pointcut
-핵심사항을 모아둔 것 -> joinpoint
+sop("before") : 호출전에 처리되는 공통사항 -> Advice
+a() : 핵심사항 -> pointcut
+a(), b(), c() : 핵심사항을 모아둔 것 -> joinpPoint
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MzYwMjE5LC03OTcwNTU5N119
+eyJoaXN0b3J5IjpbLTY0NTg3NDIwNiwtNzk3MDU1OTddfQ==
 -->

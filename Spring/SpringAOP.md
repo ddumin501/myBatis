@@ -23,7 +23,55 @@ sop("After") : 호출후에 처리되는 공통사항 -> (2)AfterAdvice
 
 a() : 핵심사항 -> pointcut
 a(), b(), c() : 핵심사항을 모아둔 것 -> joinpPoint
+
+## 선언적 트랜잭션 처리
+```java
+1) applicationContext.xml파일내용
+<!-- 선언적 트랜잭션 -->	
+<aop:aspectj-autoproxy/>
+<bean id="transactionManager" 
+      class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+  <property name="dataSource" ref="dataSource"/>
+</bean>	
+<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+  <constructor-arg index="0" ref="sqlSessionFactory" />
+</bean> 
+<!--아래 설정 추가하세요!-->
+<tx:annotation-driven transaction-manager="transactionManager"/>
+
+2) AccountDAO.java에서 @Transactional어노테이션 설정 
+@Repository
+public class AccountDAO {
+	@Autowired
+	private SqlSession sqlSession;	
+	@Transactional
+	public void account(){
+		HashMap<String, Object> map = new HashMap<>();
+		String no1 ="101";
+		map.put("no", no1);
+		map.put("amount", 10);
+		int rowCnt1 = 
+			sqlSession.update("com.my.vo.Account.withdraw",map);
+		if(rowCnt1 == 0) {
+			throw new RuntimeException(no1+"계좌가 없어서 출금오류");
+		}		
+		map = new HashMap<>();
+		//map.put("no", "102"); //
+		
+		String no2 = "999";
+		map.put("no", no2); //
+		map.put("amount", 10);
+
+		//내부에서 uncheckedexception발생 - 자동롤백되어야한다.
+		int rowCnt2 =sqlSession.update("com.my.vo.Account.deposit",	map);
+		if(rowCnt2 == 0) {
+			throw new RuntimeException(no1+"계좌가 없어서 입금오류");
+		}
+	}
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTEyMTEzOTYsODEzOTMwMTgwLC0xNj
-kxMjExMzk2LC01MDI4NTA0MDQsLTc5NzA1NTk3XX0=
+eyJoaXN0b3J5IjpbMTAwOTMwMTM3MiwtMTY5MTIxMTM5Niw4MT
+M5MzAxODAsLTE2OTEyMTEzOTYsLTUwMjg1MDQwNCwtNzk3MDU1
+OTddfQ==
 -->

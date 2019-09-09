@@ -1,5 +1,5 @@
- ## Aspect Oriented Programming   VS   Aspect Oriented Programming
-|  Aspect Oriented Programming |  Aspect Oriented Programming |
+ ## Aspect Oriented Programming   VS   Object Oriented Programming
+|  Aspect Oriented Programming |  Object Oriented Programming |
 |--|--|
 | 재사용성을 높이자 | 재사용성을 높이자 |
 |공통사항(관점)<br>sop("before"); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sop("before"); <br> a.a(); 핵심사항(관점)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b.b(); <br> sop("after");| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parent(공통사항) <br>Child &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Child&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Child | 
@@ -24,5 +24,6 @@ sop("After") : 호출후에 처리되는 공통사항 -> (2)AfterAdvice
 a() : 핵심사항 -> pointcut
 a(), b(), c() : 핵심사항을 모아둔 것 -> joinpPoint
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwMjg1MDQwNCwtNzk3MDU1OTddfQ==
+eyJoaXN0b3J5IjpbLTE2OTEyMTEzOTYsLTUwMjg1MDQwNCwtNz
+k3MDU1OTddfQ==
 -->

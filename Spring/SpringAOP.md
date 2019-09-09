@@ -8,7 +8,7 @@
 
 
 ##  Aspect Oriented Programming
-공통사항(관심)과 핵심사항(관심)을 엮는다 - Weaving
+공통사항(관점)과 핵심사항(관점)을 엮는다 - Weaving
 
 #### weaving방법
 1) 핵심사항 컴파일시에 바이트코드에 공통사항을 추가
@@ -24,6 +24,6 @@ sop("After") : 호출후에 처리되는 공통사항 -> (2)AfterAdvice
 a() : 핵심사항 -> pointcut
 a(), b(), c() : 핵심사항을 모아둔 것 -> joinpPoint
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTEyMTEzOTYsLTUwMjg1MDQwNCwtNz
-k3MDU1OTddfQ==
+eyJoaXN0b3J5IjpbODEzOTMwMTgwLC0xNjkxMjExMzk2LC01MD
+I4NTA0MDQsLTc5NzA1NTk3XX0=
 -->

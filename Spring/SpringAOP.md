@@ -2,7 +2,7 @@
 |  Aspect Oriented Programming |  Aspect Oriented Programming |
 |--|--|
 | 재사용성을 높이자 | 재사용성을 높이자 |
-|공통사항(관점)<br>sop("before"); &nbsp;&nbsp; sop("before"); <br> a.a(); 핵심사항(관점)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b.b(); <br> sop("after");| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parent(공통사항) <br>Child &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Child&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Child | 
+|공통사항(관점)<br>sop("before"); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sop("before"); <br> a.a(); 핵심사항(관점)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b.b(); <br> sop("after");| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parent(공통사항) <br>Child &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Child&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Child | 
 |공통사항과 핵심사항이 수평구조 | 공통사항과 핵심사항이 수직구조|
 |상속관계가 없다. <br>핵심사항과 공통사항의 관점 분리 형식.|자식에게 고스란히 영향 끼침 -> 위험 多|
 
@@ -15,5 +15,5 @@
 2) 핵심사항용 클래스로드시 바이트코드에 공통사항을 추가
 3) 런타임시 프록시객체를 생성해서 공통사항을 추가 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYzNzEzNjQyLC03OTcwNTU5N119
+eyJoaXN0b3J5IjpbLTExODU2MjA3NzAsLTc5NzA1NTk3XX0=
 -->

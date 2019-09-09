@@ -15,11 +15,14 @@
 2) 핵심사항용 클래스로드시 바이트코드에 공통사항을 추가
 3) 런타임시 프록시객체를 생성해서 공통사항을 추가 
 
+### 용어 정리 
+-Advice
 sop("before") : 호출전에 처리되는 공통사항 -> (1)BeforeAdvice
 sop("After") : 호출후에 처리되는 공통사항 -> (2)AfterAdvice
-호출 
+호출 전후에 처리되는 공통사항 -> (3)AroundAdvice
+
 a() : 핵심사항 -> pointcut
 a(), b(), c() : 핵심사항을 모아둔 것 -> joinpPoint
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyMjA4NDcwOSwtNzk3MDU1OTddfQ==
+eyJoaXN0b3J5IjpbMTczMDE3NTU5NiwtNzk3MDU1OTddfQ==
 -->

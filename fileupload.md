@@ -129,8 +129,38 @@ public class ListServlet extends HttpServlet {
 	}
 }
 ```
+### 파일 내려받기 기능 구현
+```java
+public class DownServlet extends HttpServlet {
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String realPath = getServletContext().getRealPath("files");
+		String fileName = request.getParameter("fileName");
+		
+		File file = new File(realPath,fileName);
+		FileInputStream fis = new FileInputStream(file);
+		
+		//무조건 다운로드 받게 하는 Header
+		response.setHeader("Content-Type", 
+				"application/octet-stream; charset = UTF-8");
+		response.setHeader("Content-Disposition",
+				"attachment;filename=" + fileName+";");
+		
+		OutputStream os = response.getOutputStream();
+		
+		int readValue = -1;
+		while((readValue=fis.read())!= -1) {
+			System.out.println((char)readValue);
+			os.write(readValue);
+		}
+		os.flush();
+		os.close();
+	}
+
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ4NDUxNjA1LC0zNDA5OTgwMiwtMTc4Mj
-YzMTUzOSwtMzQ5NDkyOTU2LDI0NjY0NDU2MCwtMTc0NTkyOTk5
-Niw1MTYwMzA2NTFdfQ==
+eyJoaXN0b3J5IjpbLTQxMDczNTEwMiwzNDg0NTE2MDUsLTM0MD
+k5ODAyLC0xNzgyNjMxNTM5LC0zNDk0OTI5NTYsMjQ2NjQ0NTYw
+LC0xNzQ1OTI5OTk2LDUxNjAzMDY1MV19
 -->

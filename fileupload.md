@@ -42,8 +42,17 @@ public class UpServlet extends HttpServlet {
 
 ### library 다운받기
 mvnrepository에 가서 servlets.com이 제공하는 cos를 다운받는다.
+```java
+<!-- https://mvnrepository.com/artifact/servlets.com/cos -->
+<dependency>
+    <groupId>servlets.com</groupId>
+    <artifactId>cos</artifactId>
+    <version>05Nov2002</version>
+</dependency>
+```
 
 ```java
+//UpServlet
 public class UpServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -51,12 +60,13 @@ public class UpServlet extends HttpServlet {
 		String realPath = getServletContext().getRealPath(saveDirectory);
 		String encoding = "UTF-8";
 		System.out.println(realPath);
-		MultipartRequest mr= new MultipartRequest(request, realPath,encoding); //encoding이 추가도
+		MultipartRequest mr= new MultipartRequest(request, realPath,encoding); //encoding이 추가된 생성자
+
 	}
 
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDczOTY0MDYsLTM0OTQ5Mjk1NiwyND
+eyJoaXN0b3J5IjpbLTE3ODI2MzE1MzksLTM0OTQ5Mjk1NiwyND
 Y2NDQ1NjAsLTE3NDU5Mjk5OTYsNTE2MDMwNjUxXX0=
 -->

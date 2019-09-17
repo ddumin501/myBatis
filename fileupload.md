@@ -130,7 +130,9 @@ public class ListServlet extends HttpServlet {
 }
 ```
 ### 파일 내려받기 기능 구현
+
 ```java
+//<a href="./down?fileName=${i}">  a 태그로 직접 요청
 public class DownServlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -160,7 +162,7 @@ public class DownServlet extends HttpServlet {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMDczNTEwMiwzNDg0NTE2MDUsLTM0MD
+eyJoaXN0b3J5IjpbMTg4NjQ4NDk3NCwzNDg0NTE2MDUsLTM0MD
 k5ODAyLC0xNzgyNjMxNTM5LC0zNDk0OTI5NTYsMjQ2NjQ0NTYw
 LC0xNzQ1OTI5OTk2LDUxNjAzMDY1MV19
 -->

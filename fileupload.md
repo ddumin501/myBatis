@@ -50,19 +50,31 @@ mvnrepository에 가서 servlets.com이 제공하는 cos를 다운받는다.
     <version>05Nov2002</version>
 </dependency>
 ```
-
+### 파일 업로드 Servlet 
 ```java
 //UpServlet
 public class UpServlet extends HttpServlet {
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String saveDirectory = "files"; // tomcatserver 배포 directory의 files 폴더
-		String realPath = getServletContext().getRealPath(saveDirectory);
-		String encoding = "UTF-8";
-		System.out.println(realPath);
-		MultipartRequest mr= new MultipartRequest(request, realPath,encoding); //encoding이 추가된 생성자
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+//		InputStream is = request.getInputStream(); //http request의 message body를 읽어올 수 있음.
+//		InputStreamReader isr = new InputStreamReader(is);
+//		int readValue = -1;
+//		while((readValue=isr.read())!= -1) {
+//		System.out.print((char)readValue);
+//		}
 
+		String saveDirectory = "files"; // tomcat server 배포 directory의 files 폴더
+		String realPath = getServletContext().getRealPath(saveDirectory);
+		int maxPostSize = 10 * 1024; // 10KB --업로드 될 수 있는 최대 파일크기 지정
+		String encoding = "UTF-8";
+		FileRenamePolicy policy = 
+				new MyFileRenamePolicy(); //중복된 이름을 가진 파일이 올라갈 경우
+		// MultipartRequest mr= new MultipartRequest(request, realPath,encoding); //encoding 매개변수 추가
+		// MultipartRequest mr = new MultipartRequest(request, realPath, maxPostSize, encoding);// 파일크기 매개변수 추가
+		MultipartRequest mr = new MultipartRequest(request, realPath, maxPostSize, encoding, policy); //policy변수 추가
 	}
+
 }
 ```
 ### 파일 이름 지정하기(중복 될 경우 덮어쓰기 방지)
@@ -100,7 +112,7 @@ public class MyFileRenamePolicy implements FileRenamePolicy{
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM0ODM5ODQ4LC0xNzgyNjMxNTM5LC0zND
+eyJoaXN0b3J5IjpbLTM0MDk5ODAyLC0xNzgyNjMxNTM5LC0zND
 k0OTI5NTYsMjQ2NjQ0NTYwLC0xNzQ1OTI5OTk2LDUxNjAzMDY1
 MV19
 -->

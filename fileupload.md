@@ -20,6 +20,7 @@ form 태그를 만든다
 </body>
 </html>
 ```
+
 ```java
 //UpServlet.java
 
@@ -36,10 +37,8 @@ public class UpServlet extends HttpServlet {
 	}
 
 }
-
 ```
-> Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ2NjQ0NTYwLC0xNzQ1OTI5OTk2LDUxNj
-AzMDY1MV19
+eyJoaXN0b3J5IjpbMTE4MDU2MjUxNiwyNDY2NDQ1NjAsLTE3ND
+U5Mjk5OTYsNTE2MDMwNjUxXX0=
 -->

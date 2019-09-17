@@ -42,7 +42,21 @@ public class UpServlet extends HttpServlet {
 
 ### library 다운받기
 mvnrepository에 가서 servlets.com이 제공하는 cos를 다운받는다.
+
+```java
+public class UpServlet extends HttpServlet {
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String saveDirectory = "files"; // tomcatserver 배포 directory의 files 폴더
+		String realPath = getServletContext().getRealPath(saveDirectory);
+		String encoding = "UTF-8";
+		System.out.println(realPath);
+		MultipartRequest mr= new MultipartRequest(request, realPath,encoding); //encoding이 추가도
+	}
+
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0OTQ5Mjk1NiwyNDY2NDQ1NjAsLTE3ND
-U5Mjk5OTYsNTE2MDMwNjUxXX0=
+eyJoaXN0b3J5IjpbLTE3NDczOTY0MDYsLTM0OTQ5Mjk1NiwyND
+Y2NDQ1NjAsLTE3NDU5Mjk5OTYsNTE2MDMwNjUxXX0=
 -->

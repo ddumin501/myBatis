@@ -111,8 +111,26 @@ public class MyFileRenamePolicy implements FileRenamePolicy{
 
 }
 ```
+### 파일 목록 불러오기
+```java
+public class ListServlet extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// files 폴더에 있는 파일 목록 응답하기
+		String realPath = getServletContext().getRealPath("files");
+		System.out.println("files의 realPath::::::"+realPath);
+		File files = new File(realPath);
+		request.setAttribute("list", files.list());
+
+		String path = "/listresult.jsp";
+		RequestDispatcher rd = request.getRequestDispatcher(path);
+		rd.forward(request, response);
+	}
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0MDk5ODAyLC0xNzgyNjMxNTM5LC0zND
-k0OTI5NTYsMjQ2NjQ0NTYwLC0xNzQ1OTI5OTk2LDUxNjAzMDY1
-MV19
+eyJoaXN0b3J5IjpbMzQ4NDUxNjA1LC0zNDA5OTgwMiwtMTc4Mj
+YzMTUzOSwtMzQ5NDkyOTU2LDI0NjY0NDU2MCwtMTc0NTkyOTk5
+Niw1MTYwMzA2NTFdfQ==
 -->

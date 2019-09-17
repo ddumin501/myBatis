@@ -1,7 +1,7 @@
 ### 기본 페이지 구성만들기
 form 태그를 만든다.
-이때의 form태그의 property를 보면 enctype이 default값으로 들어있는데 이 default값 대신 multipart/form-data 형식으로 지정해줘야한다.
-또한 무조건 get 방식으로 지정해주어야함
+이때의 form태그 property를 보면 enctype가 default값으로 들어있다.
+이 default값 대신 multipart/form-data 형식으로 지정해줘야한다.
 ```html
 /* up.html */
 <!DOCTYPE html>
@@ -162,7 +162,7 @@ public class DownServlet extends HttpServlet {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NjQ4NDk3NCwzNDg0NTE2MDUsLTM0MD
-k5ODAyLC0xNzgyNjMxNTM5LC0zNDk0OTI5NTYsMjQ2NjQ0NTYw
-LC0xNzQ1OTI5OTk2LDUxNjAzMDY1MV19
+eyJoaXN0b3J5IjpbLTE3MTMxNzE4NTMsMTg4NjQ4NDk3NCwzND
+g0NTE2MDUsLTM0MDk5ODAyLC0xNzgyNjMxNTM5LC0zNDk0OTI5
+NTYsMjQ2NjQ0NTYwLC0xNzQ1OTI5OTk2LDUxNjAzMDY1MV19
 -->

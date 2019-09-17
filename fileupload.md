@@ -41,8 +41,8 @@ public class UpServlet extends HttpServlet {
 ```
 
 ### library 다운받기
-mvnrepository에 가서 servlets.com이 제공하는 cos.jar를 다운받는다.
+mvnrepository에 가서 servlets.com이 제공하는 cos를 다운받는다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0NDY4NjY5NywyNDY2NDQ1NjAsLTE3ND
+eyJoaXN0b3J5IjpbLTM0OTQ5Mjk1NiwyNDY2NDQ1NjAsLTE3ND
 U5Mjk5OTYsNTE2MDMwNjUxXX0=
 -->

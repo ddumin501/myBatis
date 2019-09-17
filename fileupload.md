@@ -63,10 +63,44 @@ public class UpServlet extends HttpServlet {
 		MultipartRequest mr= new MultipartRequest(request, realPath,encoding); //encoding이 추가된 생성자
 
 	}
+}
+```
+### 파일 이름 지정하기(중복 될 경우 덮어쓰기 방지)
+```java
+//FileRenamePolicy의 rename 메소드 오버라이딩 하기
+public class MyFileRenamePolicy implements FileRenamePolicy{
+
+	@Override
+	public File rename(File file) {
+		//System.out.println("rename("+ file +")호출");
+		//1.파일이름 얻기
+		System.out.println(file.getName()+", "+file.getAbsolutePath());
+		
+		String parent = file.getParent(); //현재파일의 부모파일까지의 경로
+		String oldName = file.getName();
+		System.out.println("parent :::::" + parent);
+		
+		//2.파일이름바꾸기 - yyMMddHHmmss
+		//2-1. 확장자제외한 파일이름 얻기
+		int extIdx = oldName.lastIndexOf(".");
+		String name = oldName.substring(0, extIdx);
+		//2-2. 이름에 yyMMddHHmmss이어붙이기
+		SimpleDateFormat sdf = 
+				new SimpleDateFormat("yyMMddHHmmss");
+		String now = sdf.format(new java.util.Date());
+		name = name + "_" + now;
+		System.out.println("name:::::::"+name);
+		//2-3. 이름과 확장자 이어붙이기
+		String newName = name + oldName.substring(extIdx);
+		//3.새파일 생성후 반환
+		File f = new File(parent, newName);
+		return f;
+	}
 
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODI2MzE1MzksLTM0OTQ5Mjk1NiwyND
-Y2NDQ1NjAsLTE3NDU5Mjk5OTYsNTE2MDMwNjUxXX0=
+eyJoaXN0b3J5IjpbMzM0ODM5ODQ4LC0xNzgyNjMxNTM5LC0zND
+k0OTI5NTYsMjQ2NjQ0NTYwLC0xNzQ1OTI5OTk2LDUxNjAzMDY1
+MV19
 -->

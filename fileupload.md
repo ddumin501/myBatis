@@ -2,6 +2,7 @@ form 태그를 만든다
 이때의 form태그의 property를 보면 enctype이 default로 들어있는데 이 default 대신 multipart/form-data 형식으로 지정해줘야한다.
 또한 무조건 get 방식으로 지정해주어야함
 ```html
+/* up.html */
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,9 +20,26 @@ form 태그를 만든다
 </body>
 </html>
 ```
-```ㄴㄷㄱ
+```java
+//UpServlet.java
+
+//import 생략
+public class UpServlet extends HttpServlet {
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		InputStream is = request.getInputStream(); //http request의 message body를 읽어올 수 있음.
+		InputStreamReader isr = new InputStreamReader(is);
+		int readValue = -1;
+		while((readValue=isr.read())!= -1) {
+		System.out.print((char)readValue);
+		}
+	}
+
+}
+
+```
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjMwMzkzNTQsLTE3NDU5Mjk5OTYsNT
-E2MDMwNjUxXX0=
+eyJoaXN0b3J5IjpbMjQ2NjQ0NTYwLC0xNzQ1OTI5OTk2LDUxNj
+AzMDY1MV19
 -->

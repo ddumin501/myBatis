@@ -28,9 +28,9 @@ web.xml파일
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 ```
-springmvc용 xml :  mvc1-servlet.xml
+springMVC용 설정파일이름 :  mvc1-servlet.xml
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU1OTgwNDAyXX0=
+eyJoaXN0b3J5IjpbMTc0ODYzNDUwNl19
 -->

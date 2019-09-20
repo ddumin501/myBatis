@@ -12,7 +12,11 @@
 3) ViewResolver :해당 View찾기
 **Controller에서 View로 이동하는 기본방법:forward
 ex) @GetMapping("/a")
-&nv
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public String a( ){ return "/b.jsp"; }
+**Controller에서 View로 이동하는 방법:
+ex) @GetMapping("/a")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public String a( ){ return "/b.jsp"; }
+
 web.xml파일 
 ```java
 <servlet>
@@ -27,5 +31,5 @@ web.xml파일
 springmvc용 xml :  mvc1-servlet.xml
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwOTM5MjMyNl19
+eyJoaXN0b3J5IjpbLTE2NTI5OTM0MTNdfQ==
 -->
